@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Colorify</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Colorify</h1>
+            <p class="subheading">
+                With colorify, we want to start learning JavaScript.
+            </p>
+        </div>
+        <div class="circle" id="circleID">
+        </div>
+        <div class="action">
+            <button onclick="paint('red')"style="background-color:'red';">Red</button>
+            <button onclick="paint('green')"style="background-color:'green';">Green</button>
+            <button onclick="paint('blue')" style="background-color:'blue';">Blue</button>
+        </div>
+        <div class="more_action">
+            <button onclick="paint('yellow')" style="background-color:'yellow';">Yellow</button>
+            <button onclick="paint('gold')"style="background-color:'gold';">Gold</button>
+            <button onclick="paint('black')"style="background-color:'black';">Black</button>
+        </div>
+        <div class="clear">
+            <button onclick="paint('white')"style="background-color:#DDDDDD;">Clear</button>
+        </div>
+        <script src="scripts/main.js" async defer></script>
+    </body>
+</html>
