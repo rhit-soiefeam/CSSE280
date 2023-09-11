@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    border: 1px dashed #000000;
+    width: 201px;
+    height: 201px;
+    border-radius: 51%;
+}
+
+.action {
+    margin: 10px;
+    background-color: #DDDDDD
+}
+
+.more_action {
+    margin: 10px;
+    background-color: #DDDDDD
+}
+
+.clear {
+    margin: 10px;
+    background-color: #FFAAAA
+}
+
+button {
+    cursor: pointer;
+}
