@@ -1,0 +1,40 @@
+p {
+    margin:0;
+    background-color:#fff;
+}
+.青い箱 {
+    background-color:#0000DD;
+    /* font settings */
+    color:#9999FF; /*light blue */
+    height:100px;
+    width:auto;
+    padding:10px;
+    border:10px ridge;
+    border-color: black green orange yellow;
+    margin:20px;
+}
+.黄色い箱 {
+    background: rgba(200, 200, 0, 0.3);
+    /*font settings */
+    color: #FFFF99; /*light yellow */
+    height:100px;
+    width:auto;
+    padding:5px 10px 15px 20px;
+    border-radius:80px;
+    padding:10px;
+    border-width:10px;
+    margin:5px;
+}
+.緑の箱{
+    background-image:url(ocean.jpg);
+    background-size: 100% 100%;
+    color:#99FFAA; /* light green */
+    height:100px;
+    width:auto;
+    padding:5px 20px;
+    border: 20px groove;
+    margin:1px;
+}
+.great{
+    font-size:300%;
+}
