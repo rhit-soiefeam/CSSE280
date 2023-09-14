@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Japanese">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.dark.min.css' integrity='sha512-C/Z74U+ioSrVHIrPuUqKIG9HmaV5Ut9QMzxNtyMP+IeBYb5H2Uhhaxy4R0yj0Jmr9vH88nNzl490qClqbitOjQ==' crossorigin='anonymous'/>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css' integrity='sha512-ZuRTqfQ3jNAKvJskDAU/hxbX1w25g41bANOVd1Co6GahIe2XjM6uVZ9dh0Nt3KFCOA061amfF2VeL60aJXdwwQ==' crossorigin='anonymous'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css' integrity='sha512-AZtJoEn5SfSZimv10x5NMO2gaZCdoU8nxtHJK8O4SbKNlQeb1ggkvf0b0QixuuXIjX3Tp5jzBbTWajki81Vl2g==' crossorigin='anonymous'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css' integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==' crossorigin='anonymous'/>
     <link rel="stylesheet" href="styles/main.css">
-    <title>美しいボタン</title>
+    <title>算数のアプリ</title>
 </head>
 <body>
+    <div class="header">
+        <h1>算数のアプリ</h1>
+    </div>
+    <div class="container-fluid">
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">算数のアプリ</a>
+        </nav>
+    </div>
+    <div id="mainPage" class="container page-container">
+        <p>このアプリにようこそ</p>
+        <p>ボタンを押すだけで、数を変えます。</p>
+        <p>アプリを使った後で、意見をメールで送ってくださいませんか?</p>
+        <p>メールアドレス：alexandersoiefer0@gmail.com</p>
+        <div id="counterText">
+            数 = 0
+        </div>
+        <div id="button-group">
+            <button id="tendecrementButton" type="button" class="btn btn-danger">十番を引く</button>
+            <button id="decrementButton" type="button" class="btn btn-warning">一番を引く</button>
+            <button id="resetButton" type="button" class="btn btn-success">初めに戻る</button>
+            <button id="incrementButton" type="button" class="btn btn-primary">一番を足す</button>
+            <button id="tenincrementButton" type="button" class="btn btn-info">十番を足す</button>
+        </div>
+    </div>
     <script src="scripts/main.js"></script>
 </body>
 </html>
