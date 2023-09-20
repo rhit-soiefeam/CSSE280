@@ -30,10 +30,11 @@ main = function() {
         updateView();
     };
 }
-function paint(color) {
+function paint(color, tag) {
     console.log(color);
     const circle = document.getElementById('circleID');
     circle.style =  `background-color:${color}`
+    document.querySelector("#circleText").innerHTML = `${tag}`
     console.log(circle);
 }
 main();

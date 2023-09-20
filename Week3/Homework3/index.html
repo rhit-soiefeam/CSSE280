@@ -11,47 +11,51 @@
 </head>
 <body>
     <div class="header">
-        <h1 style="font-size:40px">いちばんすきなこと</h1>
+        <h1 style="font-size:40px;">いちばんすきなこと：</h1>
     </div>
     <hr>
-    <div id="mainPage" class="section container">
-        <h2 style="font-size:30px">いちばんすきなカズ</h2>
+    <h2 style="font-size:30px;color:#660099;">いちばんすきなカズ：</h2>
+    <div id="mainPage" class="section container overflow-hidden">
         <div id="counterText">
             0
         </div>
-        <div id="button-group">
-            <button id="tendecrementButton" type="button" class="btn btn-danger">ー１０</button>
-            <button id="decrementButton" type="button" class="btn btn-warning">ー１</button>
-            <button id="resetButton" type="button" class="btn btn-success">はじめにもどる</button>
-            <button id="incrementButton" type="button" class="btn btn-primary">＋１</button>
-            <button id="tenincrementButton" type="button" class="btn btn-info">＋１０</button>
+        <!-- Used internet resources for bootstrap / html help (but no lines of code) -->
+        <div class="actions gx-10"> <!-- Increment Button Container-->
+            <button id="tendecrementButton" type="button" class="btn btn-danger"style="color:#660099;">ー１０</button>
+            <button id="decrementButton" type="button" class="btn btn-warning"style="color:#660099;">ー１</button>
+            <button id="resetButton" type="button" class="btn btn-success"style="color:#660099;">ハジメにもどる</button>
+            <button id="incrementButton" type="button" class="btn btn-primary"style="color:#660099;">＋１</button>
+            <button id="tenincrementButton" type="button" class="btn btn-info"style="color:#660099;">＋１０</button>
         </div>
     </div>
     <hr>
-    <div class="section container">
-        <h2 style="font-size:30px">いちばんすきなイロ</h2>
+    <h2 style="font-size:30px;color:#660099;">いちばんすきなイロ：</h2>
+    <div class="section container overflow-hidden">
         <div class="circle container" id="circleID">
+            <p id="circleText" style="color:#660099;font-size:20px;margin-top:10px;">イロがない</p>
         </div>
-        <div class="action">
-            <button onclick="paint('#DD0000')" type="button" class="btn btn-danger"">アカ</button>
-            <button onclick="paint('#DDDD00')" type="button" class="btn btn-warning">キイロ</button>
-            <button onclick="paint('#0000DD')" type="button" class="btn btn-primary">アオ</button>
-        </div>
-        
-        <div class="more_action">
-            <button onclick="paint('#DDa600')" type="button" class="btn btn-warning">オレンジイロ</button>
-            <button onclick="paint('#00DD00')" type="button" class="btn btn-success">ミドリ</button>
-            <button onclick="paint('#8800DD')" type="button" class="btn btn-info">ムラサキ</button>
-        </div>
-        <div class="more_action">
-            <button onclick="paint('#AAAAAA')" type="button" class="btn btn-info">ハイイロ</button>
-            <button onclick="paint('#EEEEEE')" type="button" class="btn btn-default">シロ</button>
-            <button onclick="paint('black')" type="button" class="btn btn-info">クロ</button>
-        </div>
-        <div class="clear">
-            <button onclick="paint('#BBAAFF')" type="button" class="btn btn-success">ハジメにもどる</button>
+        <div class="actions g-0">
+            <div class="action col-2 g-0"> <!-- Primary Colors -->
+                <button onclick="paint('#DD0000', 'アカ')" type="button" class="btn btn-danger" style="color:#660099;">アカ</button>
+                <button onclick="paint('#DDDD00', 'キイロ')" type="button" class="btn btn-warning"style="color:#660099;">キイロ</button>
+                <button onclick="paint('#0000DD', 'アオ')" type="button" class="btn btn-primary"style="color:#660099;">アオ</button>
+            </div>
+            <div class="action col-2 g-0"> <!-- Secondary Colors -->
+                <button onclick="paint('#DDa600', 'オレンジ')" type="button" class="btn btn-warning"style="color:#660099;">オレンジ</button>
+                <button onclick="paint('#00DD00', 'ミドリ')" type="button" class="btn btn-success"style="color:#660099;">ミドリ</button>
+                <button onclick="paint('#8800DD', 'ムラサキ')" type="button" class="btn btn-info"style="color:#660099;">ムラサキ</button>
+            </div>
+            <div class="action col-2 g-0"> <!-- Grayscale -->
+                <button onclick="paint('#888888', 'ハイイロ')" type="button" class="btn btn-info"style="color:#660099;">ハイイロ</button>
+                <button onclick="paint('#EEEEEE', 'シロ')" type="button" class="btn btn-default"style="color:#660099;">シロ</button>
+                <button onclick="paint('#000000', 'クロ')" type="button" class="btn btn-info"style="color:#660099;">クロ</button>
+            </div>
+            <div class="action col-2 g-0"> <!-- Reset -->
+                <button onclick="paint('#BBAADD', 'イロがない')" type="button" class="btn btn-success"style="color:#660099;">ハジメにもどる</button>
+            </div>    
         </div>
     </div>
+    <hr>
     <script src="scripts/main.js"></script>
 </body>
 </html>
