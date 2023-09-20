@@ -11,10 +11,11 @@
 </head>
 <body>
     <div class="header">
-        <h1>いちばんすきなこと</h1>
+        <h1 style="font-size:40px">いちばんすきなこと</h1>
     </div>
-    <div id="mainPage" class="container page-container">
-        <p>いちばんすきなカズ</p>
+    <hr>
+    <div id="mainPage" class="section container">
+        <h2 style="font-size:30px">いちばんすきなカズ</h2>
         <div id="counterText">
             0
         </div>
@@ -26,26 +27,30 @@
             <button id="tenincrementButton" type="button" class="btn btn-info">＋１０</button>
         </div>
     </div>
-    <div class="container">
-        <h1>Colorify</h1>
-        <p class="subheading">
-            With colorify, we want to start learning JavaScript.
-        </p>
-    </div>
-    <div class="circle" id="circleID">
-    </div>
-    <div class="action">
-        <button onclick="paint('red')"style="background-color:'red';">Red</button>
-        <button onclick="paint('green')"style="background-color:'green';">Green</button>
-        <button onclick="paint('blue')" style="background-color:'blue';">Blue</button>
-    </div>
-    <div class="more_action">
-        <button onclick="paint('yellow')" style="background-color:'yellow';">Yellow</button>
-        <button onclick="paint('gold')"style="background-color:'gold';">Gold</button>
-        <button onclick="paint('black')"style="background-color:'black';">Black</button>
-    </div>
-    <div class="clear">
-        <button onclick="paint('white')"style="background-color:#DDDDDD;">Clear</button>
+    <hr>
+    <div class="section container">
+        <h2 style="font-size:30px">いちばんすきなイロ</h2>
+        <div class="circle container" id="circleID">
+        </div>
+        <div class="action">
+            <button onclick="paint('#DD0000')" type="button" class="btn btn-danger"">アカ</button>
+            <button onclick="paint('#DDDD00')" type="button" class="btn btn-warning">キイロ</button>
+            <button onclick="paint('#0000DD')" type="button" class="btn btn-primary">アオ</button>
+        </div>
+        
+        <div class="more_action">
+            <button onclick="paint('#DDa600')" type="button" class="btn btn-warning">オレンジイロ</button>
+            <button onclick="paint('#00DD00')" type="button" class="btn btn-success">ミドリ</button>
+            <button onclick="paint('#8800DD')" type="button" class="btn btn-info">ムラサキ</button>
+        </div>
+        <div class="more_action">
+            <button onclick="paint('#AAAAAA')" type="button" class="btn btn-info">ハイイロ</button>
+            <button onclick="paint('#EEEEEE')" type="button" class="btn btn-default">シロ</button>
+            <button onclick="paint('black')" type="button" class="btn btn-info">クロ</button>
+        </div>
+        <div class="clear">
+            <button onclick="paint('#BBAAFF')" type="button" class="btn btn-success">ハジメにもどる</button>
+        </div>
     </div>
     <script src="scripts/main.js"></script>
 </body>

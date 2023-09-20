@@ -3,9 +3,8 @@ body {
 }
 * {
     text-align: center;
-}
-.page-container {
-    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
 }
 .button-group {
     padding: 5vw;
@@ -20,4 +19,40 @@ body {
     color: #330099;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 4em;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px groove #220044;
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+}
+
+button {
+    cursor: pointer;
+}
+
+.section {
+    background-color: rgba(220, 220, 220, 0.2);
+}
+.action {
+    margin: 10px;
+}
+
+.more_action {
+    margin: 10px;
+}
+
+.clear {
+    margin: 10px;
 }

@@ -1,6 +1,6 @@
 let counter = 0;
 updateView = function() {
-    document.querySelector("#counterText").innerHTML = `数 = ${counter}`
+    document.querySelector("#counterText").innerHTML = `${counter}`
 }
 main = function() {
     console.log("準備できた");
@@ -29,5 +29,11 @@ main = function() {
         counter = counter + 10;
         updateView();
     };
+}
+function paint(color) {
+    console.log(color);
+    const circle = document.getElementById('circleID');
+    circle.style =  `background-color:${color}`
+    console.log(circle);
 }
 main();
