@@ -1,0 +1,44 @@
+body {
+    background: #BBAADD;
+}
+* {
+    color:#660099;
+}
+#counterText {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4em;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid;
+    width: 200px;
+    height: 100px;
+    border-radius: 10%;
+}
+
+button {
+    cursor: pointer;
+}
+
+.section {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.actions {
+    margin: 10px 40px 10px 40px;
+    text-align: center;
+}
+.action {
+    margin: 2px;
+    display: contents;
+}
