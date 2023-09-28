@@ -22,23 +22,37 @@ body {
     --color-4: #369420; /* Desktop */
 }
 
-@media screen and (min-width: 1200px) {
+#size {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(22, 19, 19);
+    font-size: 35px;
+}
+
+@media screen and (min-width: 500px) {
     .container{
-        background-color: --color-4;
+        background-color: #369420;
     }
 }
 @media screen and (max-width: 1200px) {
     .container{
-        background-color: --color-3;
+        background-color: #b2b788;
     }
 }
 @media screen and (max-width: 992px) {
     .container{
-        background-color: --color-2;
+        background-color: #cdb4db;
     }
 }
 @media screen and (max-width: 768px) {
     .container{
-        background-color: --color-1;
+        background-color: #fff1e6;
+    }
+}
+@media screen and (max-width: 500px) {
+    .container{
+        background-color: #dddddd;
     }
 }
