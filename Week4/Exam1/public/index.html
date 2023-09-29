@@ -15,7 +15,7 @@
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm bg-light">
+    <nav class="navbar navbar-expand-md bg-light">
 
       <div class="container-fluid">
         <!-- Links -->
@@ -34,16 +34,23 @@
     
     </nav>
     <div class="container">
-      <div class="card" style="width:400px">
-        <img class="card-img-left" src="img_avatar1.png" alt="Card image">
-        <div class="card-body">
-          <h4 class="card-title">John Doe</h4>
-          <p class="card-text">Some example text.</p>
-          <a href="#" class="btn btn-primary">See Profile</a>
+      <div class="justify-text wide-margin" style="width:600px">
+        <img id="safe-image" src="images/hedwig.png" alt="梟のイメージ">
+        <div>
+          <h1 class="justify-text" id="owl-text">ヘッドウイッグ</h1>
+          <div id="button-id-wrapper">
+            <button onclick="transform1();" class="btn btn-primary justify-text"  style="width:300px;">梟を変化なさる</button>
+          </div>
         </div>
       </div>
-      <div class = "text">
-        ホグワーツの近所で、梟で郵便や連絡などいたせる会社でございます。
+      <div class = "justify-text" id="text-wrapper">
+        <p>ホグワーツの近所で、梟で郵便や連絡などいたせる会社でございます。</p>
+        <div id="socialmedia-id-wrapper">
+          <img class="socialmedia-image" src="images/behance.png" alt="ビーハンス">
+          <img class="socialmedia-image" src="images/dribbble-logo.png" alt="ドリブル">
+          <img class="socialmedia-image" src="images/instagram.png" alt="インスタグラム">
+          <img class="socialmedia-image" src="images/twitter.png" style="width:100px;" alt="ツイッター">
+        </div>
       </div>
     <script src="scripts/main.js"></script>
   </body>
