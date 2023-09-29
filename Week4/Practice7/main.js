@@ -31,3 +31,17 @@ function farToCel(farTemp) {
     console.log((farTemp - 32) * 5/9);
 };
 console.log(temperatures.forEach(farToCel));
+
+const cities = ['New York', 'Los Angeles', 'Chicago', 'Houston'];
+const populations = {'New York': 8398748, 'Los Angeles': 3990456, 'Chicago': 2705994, 'Houston':2320268};
+console.log(cities.forEach(elementGet));
+function elementGet(aList) {
+    console.log(populations[aList]);
+}
+for(let i = 1; i <= 5; i++) {
+    currentString = "";
+    for(let j = 1; j <= i; j++) {
+        currentString += "*";
+    }
+    console.log(currentString);
+}
