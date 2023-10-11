@@ -1,5 +1,30 @@
 {
   "projects": {
     "default": "rhit-soiefeam-firebase-fa7"
-  }
+  },
+  "targets": {
+    "rhit-soiefeam-firebase-fa7": {
+      "hosting": {
+        "00": [
+          "rhit-soiefeam-firebase-fa7"
+        ],
+        "01": [
+          "car-one"
+        ],
+        "02": [
+          "car-two-a"
+        ],
+        "04": [
+          "car-four-a"
+        ],
+        "05": [
+          "car-five-a"
+        ],
+        "03": [
+          "car-three-a"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
