@@ -13,11 +13,11 @@ class Car {
 const carModel = {
     currentCar: null,
     cars: [
-        new Car('Coupe Maserati', 'black-convertible-coupe.jpeg'),
-        new Car('Camaro SS 1LE', 'chevrolet-camaro.jpeg'),
-        new Car('Dodger Charger 1970', 'dodge-charger.jpeg'),
-        new Car('Ford Mustang 1966', 'ford-mustang.jpeg'),
-        new Car('190 SL Roadster 1962', 'mercedes-benz.jpeg')
+        new Car('クープ・マセラティ', 'black-convertible-coupe.jpeg'),
+        new Car('カマロ　S S　１ L E', 'chevrolet-camaro.jpeg'),
+        new Car('１９７０年のドジャー・チャルジャー', 'dodge-charger.jpeg'),
+        new Car('１９６６年のフォード・マスタング', 'ford-mustang.jpeg'),
+        new Car('１９６２年の１９０　S  L　ロードスター', 'mercedes-benz.jpeg')
     ]
 };
 
