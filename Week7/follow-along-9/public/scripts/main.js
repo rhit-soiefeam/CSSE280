@@ -1,91 +1,60 @@
-const IMG_PATH = 'images/';
+var rhit = rhit || {};
+rhit.FB_COLLECTION_MOVIEQUOTE = "MovieQuotes";
+rhit.FB_KEY_QUOTE = "quote";
+rhit.FB_KEY_MOVIE = "movie";
+rhit.FB_KEY_LAST_TOUCHED = "lastTouched";
+rhit.fbMovieQuotesManager = null;
+rhit.fbSingleQuoteManager = null;
 
-// Car constructor from name and image source
-class Car {
-    constructor(name, imageSource) {
-        this.clickCount = 0;
-        this.name = name;
-        this.imgSrc = IMG_PATH + imageSource;
+rhit.FbSingleQuoteManager = class {
+    constructor(movieQuoteId) {
+    this._documentSnapshot = {};
+    this._unsubscribe = null;
+    this._ref = firebase.firestore().collection(rhit.FB_COLLECTION_MOVIEQUOTE).doc(movieQuoteId);
     }
-};
-
-// Model
-const carModel = {
-    currentCar: null,
-    cars: [
-        new Car('クープ・マセラティ', 'black-convertible-coupe.jpeg'),
-        new Car('カマロ　S S　１ L E', 'chevrolet-camaro.jpeg'),
-        new Car('１９７０年のドジャー・チャルジャー', 'dodge-charger.jpeg'),
-        new Car('１９６６年のフォード・マスタング', 'ford-mustang.jpeg'),
-        new Car('１９６２年の１９０　S  L　ロードスター', 'mercedes-benz.jpeg')
-    ]
-};
-
-const carController = {
-    init() {
-        carModel.currentCar = carModel.cars[0];
-        carListView.init();
-        carView.init();
-    },
-    getCurrentCar() {
-        return carModel.currentCar;
-    },
-    getCars() {
-        return carModel.cars;
-    },
-    setCurrentCar(car) {
-        carModel.currentCar = car;
-    },
-    incrementCounter() {
-        carModel.currentCar.clickCount++;
-        console.log(carModel.currentCar.clickCount)
-        carView.render();
+    beginListening(changeListener) {
+    this._unsubscribe = this._ref.onSnapshot((doc) => {
+    if (doc.exists) {
+    console.log("Document data:", doc.data());
+    this._documentSnapshot = doc;
+    changeListener();
+    } else {
+    // doc.data() will be undefined in this case
+    console.log("No such document!");
+    //window.location.href = "/";
     }
-};
-
-const carView = {
-    init() {
-        this.carElem = document.getElementById('car');
-        this.carNameElem = document.getElementById('car-name');
-        this.carImageElem = document.getElementById('car-img');
-        this.countElem = document.getElementById('car-count');
-        this.carImageElem.addEventListener('click', this.clickHandler);
-        this.render();
-    },
-    clickHandler() {
-        return carController.incrementCounter();
-    },
-    render() {
-        const currentCar = carController.getCurrentCar();
-        this.countElem.textContent = currentCar.clickCount;
-        this.carNameElem.textContent = currentCar.name;
-        this.carImageElem.src = currentCar.imgSrc;
-        this.carImageElem.style.cursor = 'pointer';
+    });
     }
-}
-const carListView = {
-    init() {
-        this.carListElem = document.getElementById('car-list');
-        this.render();
-    },
-    render() {
-        let car, elem;
-        const cars = carController.getCars();
-        this.carListElem.innerHTML = ' ';
-        for(let i = 0; i < cars.length; i++) {
-            car = cars[i];
-            elem = document.createElement('li');
-            elem.className = 'list-group-item d-flex justify-content-between lh-condensed';
-            elem.style.cursor = 'pointer';
-            elem.textContent = car.name;
-            elem.addEventListener('click', (function(carCopy) {
-                return function() {
-                    carController.setCurrentCar(carCopy);
-                    carView.render();
-                };
-            })(car));
-            this.carListElem.appendChild(elem);
-        }
+    stopListening() {
+    this._unsubscribe();
     }
-}
-carController.init();
+    update(quote, movie) {
+    this._ref.update({
+    [rhit.FB_KEY_QUOTE]: quote,
+    [rhit.FB_KEY_MOVIE]: movie,
+    [rhit.FB_KEY_LAST_TOUCHED]: firebase.firestore.Timestamp.now(),
+    })
+    .then(() => {
+    console.log("Document successfully updated!");
+    })
+    .catch(function (error) {
+    // The document probably doesn't exist.
+    console.error("Error updating document: ", error);
+    });
+    }
+    
+    
+    delete() {
+    return this._ref.delete();
+    }
+    
+    
+    get quote() {
+    return this._documentSnapshot.get(rhit.FB_KEY_QUOTE);
+    }
+    
+    
+    get movie() {
+    return this._documentSnapshot.get(rhit.FB_KEY_MOVIE);
+    }
+} 

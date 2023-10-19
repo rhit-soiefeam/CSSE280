@@ -1,30 +1,48 @@
-body {
-    background: linear-gradient(to right, #6644bb, #aa88dd);
-    font-family: Arial, sans-serif;
+/* body {
+    background: #DDDDDD;
 }
-#car-list {
-    max-height: 400px;
-    overflow-y: auto;
-    border: 2px ridge #edf;
-    border-radius: 8px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+
+.navbar {
+    background-color: #800000;
+    color: white;
+} */
+
+.page-container {
+    margin-top: 75px;
 }
-#car-list li {
-    background-color: rgba(220, 190, 255, 0.8);
-    border-bottom: 2px ridge #edf;
-    padding: 10px 15px;
-    transition: background-color 0.25s ease;
+
+#fab {
+    background: #800000;
+    bottom: 10px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 56px;          
+    height: 56px; 
+    display: flex;
+    border-radius: 50%;
+    right: 10px;
+    z-index: 999;
 }
-#car-list li:hover {
-    background-color: #bb99ff;
+
+#fab:active {
+    opacity: 0.8;
+    transform: translateY(2px);
 }
-#car {
-    background-color: rgba(220, 190, 255, 0.8);
-    border-radius: 8px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+
+.card {
+    margin: 10px 0;
 }
-#car-img {
-    border-radius: 8px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+
+#listPage .card-title,
+#listPage .card-subtitle {
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+}
+
+.dropdown-menu-right {
+    left: -128px;
 }
