@@ -1,0 +1,30 @@
+body {
+    background: linear-gradient(to right, #6644bb, #aa88dd);
+    font-family: Arial, sans-serif;
+}
+#car-list {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 2px ridge #edf;
+    border-radius: 8px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+#car-list li {
+    background-color: rgba(220, 190, 255, 0.8);
+    border-bottom: 2px ridge #edf;
+    padding: 10px 15px;
+    transition: background-color 0.25s ease;
+}
+#car-list li:hover {
+    background-color: #bb99ff;
+}
+#car {
+    background-color: rgba(220, 190, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+#car-img {
+    border-radius: 8px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
