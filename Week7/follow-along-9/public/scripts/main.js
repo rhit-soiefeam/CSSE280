@@ -5,6 +5,7 @@ rhit.FB_KEY_MOVIE = "movie";
 rhit.FB_KEY_LAST_TOUCHED = "lastTouched";
 rhit.fbMovieQuotesManager = null;
 rhit.fbSingleQuoteManager = null;
+const db = firebase.firestore();
 
 rhit.FbSingleQuoteManager = class {
     constructor(movieQuoteId) {
@@ -58,3 +59,35 @@ rhit.FbSingleQuoteManager = class {
     return this._documentSnapshot.get(rhit.FB_KEY_MOVIE);
     }
 } 
+document.getElementById('fetchData').addEventListener('click', function() {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('dataContainer').innerHTML = `
+            <p><strong>Title:</strong>${data.title}</p>
+            <p><strong>ID:</strong>${data.id}</p>
+            <p><strong>Completed:</strong> ${data.completed}</p>
+        `;
+    })
+    .catch(error => {
+        console.error("There was an error fetching data:", error);
+    });
+});
+
+rhit.main = function () {
+	console.log("Ready");
+	// Bare bones read...
+	const ref = firebase.firestore().collection("MovieQuotes");
+	// ref.onSnapshot((querySnapshot) => {
+	// 	console.log("MovieQuotes...");
+	// 	querySnapshot.forEach((document) => {
+	// 		console.log(document.data());
+	// 	});
+	// });
+};
+// ref.add({
+//     quote: "My first quote",
+//     movie: "My first movie",
+//     lastTouched: firebase.firestore.Timestamp.now(),
+// });
+
