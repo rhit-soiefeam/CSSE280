@@ -1,3 +1,26 @@
 document.addEventListener('DOMcontentLoaded', (event) => {
     const fetchDataButton = document.getElementById('fetchDataButton');
+    const dataIndexInput = document.getElementById('dataIndexInput');
+    const dataDisplay = document.getElementById("dataDisplay");
+    fetchDataButton.addEventListener(click, function() {
+        const dataIndex = dataIndexInput.value;
+        if (dataIndex) {
+            fetch(`https://api.chucknorris.io/jokes/random?category=${dataIndex}`)
+                .then(response => response.json())
+                .then(data => {
+                    dataDisplay.innerHTML = `<strong>Title:</strong>${data.title} <br> <strong>Completed</strong>
+                            ${data.completed}`;
+                    $("#dataIndexModal").modal('hide');
+                })
+                .catch(error => {
+                    console.error("Error fetching data: ", error);
+                    dataDisplay.innerHTML = "Error fetching data. Please try again.";
+                })
+                .finally(() => {
+                    $("#dataIndexModal").modal('hide');
+                    $('body').removeClass('modal-open');
+                    $('.modal-backdrop').remove();
+                })
+        };
+    });
 })
