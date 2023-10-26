@@ -1,6 +1,9 @@
 const chalk = require('chalk');
 const getNotes = require('./notes.js');
 const msg = getNotes();
+const express = require('express');
+const app = express();
+app.use(express.json());
 // // console.log(msg);
 // // const greenMsg = chalk.green.bold(msg);
 // // console.log(greenMsg);
