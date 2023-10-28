@@ -4,6 +4,7 @@ const msg = getNotes();
 const express = require('express');
 const app = express();
 app.use(express.json());
+port = 3000;
 // // console.log(msg);
 // // const greenMsg = chalk.green.bold(msg);
 // // console.log(greenMsg);
@@ -24,6 +25,15 @@ app.use(express.json());
 // //nodemon = nodemon run code w/o starting and stopping
 // console.log(process.argv);
 // console.log(yargs.argv);
+app.listen(port, () => {
+    console.log("Server Listening on PORT:", port);
+});
+app.get("/status", (request, response)  => {
+    const status = {
+        "Status": "Running"
+    };
+    response.send(status);
+});
 yargs.command({
     command: 'add',
     describe: 'Adding a new note',
@@ -67,4 +77,3 @@ yargs.command({
         console.log('Reading a note')
     }
 })
-
