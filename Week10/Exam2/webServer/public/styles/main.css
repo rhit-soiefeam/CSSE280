@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #6644bb, #aa88dd);
+    justify-content: center;
+}
+body {
+    background-color: #eeeedd;
+    font-family: 'Yusei Magic', sans-serif;
+    justify-content: center;
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.justify-text {
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar {
+    background-color: rgb(92, 0, 128);
+    color: white;
+    opacity: 0.8;
+    font-size: 20px;
+
+}
+
+.row {
+    margin-top: 10px;
+}
+
+.card {
+    margin: 25px 10px;
+    width: 26rem;
+}

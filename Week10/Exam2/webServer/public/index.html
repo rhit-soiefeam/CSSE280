@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Symbols+Outlined">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css' integrity='sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ==' crossorigin='anonymous'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css' integrity='sha512-AZtJoEn5SfSZimv10x5NMO2gaZCdoU8nxtHJK8O4SbKNlQeb1ggkvf0b0QixuuXIjX3Tp5jzBbTWajki81Vl2g==' crossorigin='anonymous'/> 
+    <link rel='stylesheet' href="styles/main.css">
+    <link rel = "icon" type = "image/x-icon" href="favicon.ico">
+    <title>Exam 2 Part 2</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="fromAndTo">
+        <input type="text" id="from" placeholder="Enter From Index">
+        <input type="text" id="to" placeholder="Enter To Index">
+      </div>
+      <div class="MoveAndReset">
+        <button id="moveData" type="button" class="btn btn-primary">MOVE</button>
+        <button id="reset" type="button" class="btn btn-primary">RESET</button>
+      </div>
+      <div>
+        <ol id="apiData" start="0">
+          <li>January unloaded</li>
+          <li>February</li>
+          <li>March</li>
+          <li>April</li>
+          <li>May</li>
+          <li>June</li>
+          <li>July</li>
+          <li>August</li>
+          <li>September</li>
+          <li>October</li>
+          <li>November</li>
+          <li>December</li>
+        </ol>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
